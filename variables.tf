@@ -36,12 +36,12 @@ variable "instance_type" {
 
 variable "num_servers" {
   description = "The number of server nodes to deploy. We strongly recommend using 3 or 5."
-  default     = 3
+  default     = 1
 }
 
 variable "num_clients" {
   description = "The number of client nodes to deploy. You can deploy as many as you need to run your jobs."
-  default     = 6
+  default     = 0
 }
 
 variable "cluster_tag_key" {
