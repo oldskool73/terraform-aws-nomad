@@ -1,0 +1,23 @@
+{
+  "advertise_addr_wan": "61.68.20.86",
+  "advertise_addr": "10.53.3.198",
+  "autopilot": {
+    "cleanup_dead_servers": true,
+    "last_contact_threshold": "200ms",
+    "max_trailing_logs": 250,
+    "server_stabilization_time": "10s",
+    "redundancy_zone_tag": "az",
+    "disable_upgrade_migration": false,
+    "upgrade_version_tag": ""
+  },
+  "bind_addr": "10.53.3.198",
+  "bootstrap_expect": 1,
+  "client_addr": "0.0.0.0",
+  "data_dir": "/tmp/consul",
+  "datacenter": "local-dev",
+  "node_name": "desktop",
+  "server": true,
+  "start_join_wan": ["54.79.7.16"],
+  "translate_wan_addrs": true,
+  "ui": true
+}

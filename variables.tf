@@ -21,12 +21,12 @@
 
 variable "ami_id" {
   description = "The ID of the AMI to run in the cluster. This should be an AMI built from the Packer template under examples/nomad-consul-ami/nomad-consul.json. If no AMI is specified, the template will 'just work' by using the example public AMIs. WARNING! Do not use the example AMIs in a production setting!"
-  default = ""
+  default = "ami-0095f8fc23ffd3548"
 }
 
 variable "cluster_name" {
   description = "What to name the cluster and all of its associated resources"
-  default     = "nomad-example"
+  default     = "nomad-dev"
 }
 
 variable "instance_type" {
@@ -46,20 +46,20 @@ variable "num_clients" {
 
 variable "cluster_tag_key" {
   description = "The tag the EC2 Instances will look for to automatically discover each other and form a cluster."
-  default     = "nomad-servers"
+  default     = "nomad-servers-dev"
 }
 
 variable "cluster_tag_value" {
   description = "Add a tag with key var.cluster_tag_key and this value to each Instance in the ASG. This can be used to automatically find other Consul nodes and form a cluster."
-  default     = "auto-join"
+  default     = "auto-join-dev"
 }
 
 variable "ssh_key_name" {
   description = "The name of an EC2 Key Pair that can be used to SSH to the EC2 Instances in this cluster. Set to an empty string to not associate a Key Pair."
-  default     = ""
+  default     = "mec-nomad-dev"
 }
 
 variable "vpc_id" {
   description = "The ID of the VPC in which the nodes will be deployed.  Uses default VPC if not supplied."
-  default     = ""
+  default     = "vpc-0ede38b40a5ae1293"
 }
